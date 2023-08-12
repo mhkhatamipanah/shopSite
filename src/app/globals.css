@@ -1,27 +1,84 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: vazir-regular;
+  src: url("../../public/Assets/Fonts/Vazir-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===== CSS Resets =====*/
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===== Global Variables =====*/
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-1: #ffffff;
+  --color-2: #000000;
+  --color-3: #a9afc3;
+  --color-4: #202324;
+  --color-5: #454a4d;
+  --color-6: #60696e;
+  --shadow: inset 8px 8px 10px rgba(255, 255, 255, 0.2),
+    inset -10px -10px 15px rgba(0, 0, 0, 0.9);
+  --font-1: vazir-regular;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.font-1 {
+  font-family: var(--font-1) !important;
+}
+.rtl {
+  direction: rtl;
+}
+/* nav */
+.sizeNav{
+  font-size: 10px !important;
+  padding: 8px 0 8px 0 !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* drawler-bottom */
+.border-radius-drawler div:nth-child(3){
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
 }
